@@ -1,0 +1,15 @@
+# Phase 2 config (SOURCE_OF_TRUTH.md D9/D10): synthetic + cleaned/re-labeled civil_comments.
+# Run with:  WIU_DATA=processed_p2 .venv/Scripts/python.exe scripts/04_train.py --config configs/train_p2_l12.yaml
+base_model: sentence-transformers/all-MiniLM-L12-v2
+run_prefix: p2-l12
+max_len: 128
+batch_size: 32
+eval_batch_size: 256
+lr: 3.0e-5            # §8.5 default; 33M models are less forgiving than L6 at 5e-5
+weight_decay: 0.01
+warmup_frac: 0.06
+epochs: 4
+fp16: true
+pos_weight_cap: 10.0
+soft_targets: true    # synthetic risk is graded (0 / 0.3 / 0.7 / 1.0); public uses rater fractions
+seed: 42

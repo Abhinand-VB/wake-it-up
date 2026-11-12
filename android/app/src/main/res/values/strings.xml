@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Wake It Up</string>
+    <string name="a11y_service_description">Wake It Up reads the message you are typing and the recent messages on screen, only in the apps you choose, to warn you privately when a message might come across badly. Everything is checked on your phone. Nothing is stored or sent anywhere, and password fields are never read.</string>
+</resources>

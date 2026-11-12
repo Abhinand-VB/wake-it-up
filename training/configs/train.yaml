@@ -1,0 +1,13 @@
+# Phase 1 stand-in training config (civil_comments, draft-only).
+base_model: nreimers/MiniLM-L6-H384-uncased
+max_len: 128
+batch_size: 32
+eval_batch_size: 256
+lr: 5.0e-5            # §8.5 starts at 3e-5; MiniLM-L6 converges faster with a slightly higher LR
+weight_decay: 0.01
+warmup_frac: 0.06
+epochs: 3
+fp16: true
+pos_weight_cap: 10.0  # pos_weight = (N-P)/P from train binary labels, capped
+soft_targets: true    # train on rater-fraction floats (soft_labels), evaluate on binary labels
+seed: 42

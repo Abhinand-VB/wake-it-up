@@ -1,0 +1,18 @@
+# Python 3.13 (py -3.13 -m venv .venv). Versions as installed on the dev PC (2026-10-04).
+# torch is the CUDA 12.6 build from the official PyTorch index (supports sm_75 / RTX 2060):
+#   pip install torch==2.14.1+cu126 --index-url https://download.pytorch.org/whl/cu126
+--extra-index-url https://download.pytorch.org/whl/cu126
+torch==2.14.1+cu126
+transformers==5.18.0
+tokenizers==0.23.2
+huggingface_hub==1.33.0
+safetensors==0.8.0
+datasets==5.0.1
+pandas==3.0.6
+pyarrow==25.0.1
+onnx==1.23.1
+onnxscript==0.7.2
+onnxruntime==1.30.0
+numpy==2.5.3
+scikit-learn==1.9.1
+PyYAML==6.0.3

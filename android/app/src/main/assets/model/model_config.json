@@ -1,0 +1,34 @@
+{
+  "contract_version": 1,
+  "model_version": "p2-bge-2026.10.1",
+  "base_model": "bge-small-en-v1.5",
+  "do_lower_case": true,
+  "max_len": 128,
+  "context_max_messages": 5,
+  "context_separator": " | ",
+  "reply_prefix": "reply_to ",
+  "empty_context_token": "none",
+  "labels": [
+    "risk",
+    "hate_slur",
+    "insensitive",
+    "harassment",
+    "threat",
+    "sexual",
+    "misread_risk"
+  ],
+  "thresholds": {
+    "risk": 0.724,
+    "hate_slur": 0.864,
+    "insensitive": 0.706,
+    "harassment": 0.861,
+    "threat": 0.924,
+    "sexual": 0.941,
+    "misread_risk": 0.665
+  },
+  "eval": {
+    "golden_recall_risky": 0.7899,
+    "golden_fpr_benign": 0.1218,
+    "notes": "Phase 2 model (bge-small-en-v1.5) trained on synthetic chat data + cleaned/re-labeled civil_comments (SOURCE_OF_TRUTH.md D9/D10). Golden set n=275: recall 0.790, false alarms 0.122. Test (int8): risk recall=0.775, FPR=0.069. int8 vs fp32 risk F1 drop=-0.15 pts."
+  }
+}
